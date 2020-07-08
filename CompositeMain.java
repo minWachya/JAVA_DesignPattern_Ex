@@ -1,6 +1,6 @@
 package test;
 
-public class Main {
+public class CompositeMain {
 	public static void main(String[] args) {
 		try {
 			System.out.println("Makine root entries...");
