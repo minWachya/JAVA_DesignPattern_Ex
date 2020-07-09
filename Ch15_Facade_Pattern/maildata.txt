@@ -1,0 +1,4 @@
+minyoung@naver.com=Minyoung
+kim@naver.com=Kim
+lee@naver.com=Lee
+park@naver.com=Park
