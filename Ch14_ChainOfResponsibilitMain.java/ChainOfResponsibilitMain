@@ -8,9 +8,9 @@ public class ChainOfResponsibilitMain {
 		Suppert diana 	= new LimitSuppert("Diana", 200);
 		Suppert elmo	= new OddSuppert("Elmo");
 		Suppert fred	= new LimitSuppert("Fred", 300);
-		//»ç½½ Çü¼º
+		//ì‚¬ìŠ¬ í˜•ì„±
 		alice.setNext(bob).setNext(charlie).setNext(diana).setNext(elmo).setNext(fred);
-		//´Ù¾çÇÑ Æ®·¯ºí ¹ß»ı
+		//ë‹¤ì–‘í•œ íŠ¸ëŸ¬ë¸” ë°œìƒ
 		for(int i=0; i < 500; i += 33) {
 			alice.suppert(new Trouble(i));
 		}
