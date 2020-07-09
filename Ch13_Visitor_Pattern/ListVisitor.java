@@ -2,14 +2,14 @@ package ch13;
 import java.util.Iterator;
 
 public class ListVisitor extends Visitor {
-	private String currentdir = "";				//ÇöÀç ÁÖ¸ñÇÏ°í ÀÖ´Â µğ·ºÅÍ¸®ÀÇ ÀÌ¸§
+	private String currentdir = "";				//í˜„ì¬ ì£¼ëª©í•˜ê³  ìˆëŠ” ë””ë ‰í„°ë¦¬ì˜ ì´ë¦„
 		
 	@Override
-	public void visit(File file) {				//ÆÄÀÏÀ» ¹æ¹®ÇÒ ¶§ È£ÃâµÈ´Ù.
+	public void visit(File file) {				//íŒŒì¼ì„ ë°©ë¬¸í•  ë•Œ í˜¸ì¶œëœë‹¤.
 		System.out.println(currentdir + "/" + file);
 	}
 	@Override
-	public void visit(Directory directory) {	//µğ·ºÅÍ¸®¸¦ ¹æ¹®ÇÒ ¶§ È£ÃâµÈ´Ù.
+	public void visit(Directory directory) {	//ë””ë ‰í„°ë¦¬ë¥¼ ë°©ë¬¸í•  ë•Œ í˜¸ì¶œëœë‹¤.
 		System.out.println(currentdir + "/" + directory);
 		String savedir = currentdir;
 		currentdir = currentdir + "/" + directory.getName();
