@@ -9,7 +9,7 @@ public class HtmlWriter {
 		this.writer = writer;
 	}
 	
-	public void title(String title) throws IOException {						//Å¸ÀÌÆ² Ãâ·Â
+	public void title(String title) throws IOException {						//íƒ€ì´í‹€ ì¶œë ¥
 		writer.write("<html>");
 		writer.write("<head>");
 		writer.write("<title>" + title + "</title>");
@@ -17,16 +17,16 @@ public class HtmlWriter {
 		writer.write("<body>\n");
 		writer.write("<h1>" + title + "</h1>\n");
 	}
-	public void paragraph(String msg) throws IOException {						//´Ü¶ô Ãâ·Â
+	public void paragraph(String msg) throws IOException {						//ë‹¨ë½ ì¶œë ¥
 		writer.write("<p>" + msg + "</p>\n");
 	}
-	public void link(String href, String caption) throws IOException {			//¸µÅ© Ãâ·Â
+	public void link(String href, String caption) throws IOException {			//ë§í¬ ì¶œë ¥
 		paragraph("<a href=\"" + href + "\">" + caption + "</a>");
 	}
-	public void mailto(String mailaddr, String username) throws IOException {	//¸ŞÀÏ ÁÖ¼Ò Ãâ·Â
+	public void mailto(String mailaddr, String username) throws IOException {	//ë©”ì¼ ì£¼ì†Œ ì¶œë ¥
 		link("mailto:" + mailaddr, username);
 	}
-	public void close() throws IOException {									//´İ´Â´Ù.
+	public void close() throws IOException {									//ë‹«ëŠ”ë‹¤.
 		writer.write("</body>");
 		writer.write("</html>\n");
 		writer.close();
