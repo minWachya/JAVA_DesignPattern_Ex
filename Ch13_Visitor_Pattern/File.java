@@ -1,8 +1,8 @@
 package ch13;
 
 public class File extends Entry {
-	private String name;	//°¡»ó ÆÄÀÏ ÀÌ¸§
-	private int size;		//°¡»ó ÆÄÀÏ Å©±â
+	private String name;	//ê°€ìƒ íŒŒì¼ ì´ë¦„
+	private int size;		//ê°€ìƒ íŒŒì¼ í¬ê¸°
 	
 	public File(String name, int size) {
 		this.name = name;
