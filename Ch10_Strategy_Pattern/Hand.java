@@ -1,16 +1,16 @@
 package test;
 
 public class Hand {
-	public static final int HANDVALUE_GUU = 0;	//аж╦т
-	public static final int HANDVALUE_CHO = 1;	//╟║ю╖
-	public static final int HANDVALUE_PAA = 2; //╨╦
+	public static final int HANDVALUE_GUU = 0;	//ц│ц√б╦ц■
+	public static final int HANDVALUE_CHO = 1;	//б╟б║ц─б╖
+	public static final int HANDVALUE_PAA = 2; //б╨б╦
 	public static final Hand[] hand = {
 			new Hand(HANDVALUE_GUU),
 			new Hand(HANDVALUE_CHO),
 			new Hand(HANDVALUE_PAA)
 	};
 	private static final String[] name = {
-			"аж╦т", "╟║ю╖", "╨╦"
+			"ц│ц√б╦ц■", "б╟б║ц─б╖", "б╨б╦"
 	};
 	private int handvalue;
 	private Hand(int handvalue) {
