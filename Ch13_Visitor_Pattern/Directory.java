@@ -3,19 +3,19 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class Directory extends Entry {
-	private String name;							//°¡»ó µğ·ºÅÍ¸® ÀÌ¸§
-	private ArrayList dir = new ArrayList();	//µğ·ºÅÍ¸® ¿£Æ®¸®ÀÇ ÁıÇÕ
+	private String name;							//ê°€ìƒ ë””ë ‰í„°ë¦¬ ì´ë¦„
+	private ArrayList dir = new ArrayList();	//ë””ë ‰í„°ë¦¬ ì—”íŠ¸ë¦¬ì˜ ì§‘í•©
 	
 	public Directory(String name) {
 		this.name = name;
 	}
 	
 	@Override
-	public String getName() {						//ÀÌ¸§À» ¾ò´Â´Ù.
+	public String getName() {						//ì´ë¦„ì„ ì–»ëŠ”ë‹¤.
 		return name;
 	}
 	@Override
-	public int getSize() {							//»çÀÌÁî¸¦ ¾ò´Â´Ù.
+	public int getSize() {							//ì‚¬ì´ì¦ˆë¥¼ ì–»ëŠ”ë‹¤.
 		int size = 0;
 		Iterator it = dir.iterator();
 		while(it.hasNext()) {
@@ -25,16 +25,16 @@ public class Directory extends Entry {
 		return size;
 	}
 	@Override
-	public Entry add(Entry entry) {					//¿£Æ®¸®ÀÇ Ãß°¡
+	public Entry add(Entry entry) {					//ì—”íŠ¸ë¦¬ì˜ ì¶”ê°€
 		dir.add(entry);
 		return this;
 	}
 	@Override
-	public Iterator iterator() {					//Iterator »ı¼º
+	public Iterator iterator() {					//Iterator ìƒì„±
 		return dir.iterator();
 	}
 	@Override
-	public void accept(Visitor v) {					//¹æ¹®ÀÚ ½Â³«
+	public void accept(Visitor v) {					//ë°©ë¬¸ì ìŠ¹ë‚™
 		v.visit(this);
 	}
 }
