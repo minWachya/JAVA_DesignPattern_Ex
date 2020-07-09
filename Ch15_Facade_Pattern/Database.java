@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Database {
-	private Database() {}									//new¿¡¼­ ÀÎ½ºÅÏ½º¸¦ »ı¼º½ÃÅ°Áö ¾Ê±â À§ÇÑ private ¼±¾ğ
+	private Database() {}									//newì—ì„œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±ì‹œí‚¤ì§€ ì•Šê¸° ìœ„í•œ private ì„ ì–¸
 	
-	public static Properties getProperties(String dbname) {	//µ¥ÀÌÅÍº£ÀÌ½º ÀÌ¸§¿¡¼­ Properties¸¦ ¾ò´Â´Ù.
+	public static Properties getProperties(String dbname) {	//ë°ì´í„°ë² ì´ìŠ¤ ì´ë¦„ì—ì„œ Propertiesë¥¼ ì–»ëŠ”ë‹¤.
 		String filename = dbname + ".txt";
 		Properties prop = new Properties();
 		try {
