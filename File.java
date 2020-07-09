@@ -1,4 +1,4 @@
-package test;
+package ch13;
 
 public class File extends Entry {
 	private String name;	//가상 파일 이름
@@ -18,7 +18,7 @@ public class File extends Entry {
 		return size;
 	}
 	@Override
-	protected void printList(String prefix) {
-		System.out.println(prefix + "/" + this);
+	public void accept(Visitor v) {
+		v.visit(this);
 	}
 }
