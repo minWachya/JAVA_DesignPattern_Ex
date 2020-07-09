@@ -1,5 +1,0 @@
-#written by FileProperties
-#Mon Jul 06 20:44:49 KST 2020
-day=21
-year=2004
-month=4
