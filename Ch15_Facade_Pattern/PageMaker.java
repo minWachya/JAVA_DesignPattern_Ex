@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PageMaker {
-	private PageMaker() {}	//ÀÎ½ºÅÏ½º´Â ¸¸µéÁö ¾Ê±â ¶§¹®¿¡ private ¼±¾ğ
+	private PageMaker() {}	//ì¸ìŠ¤í„´ìŠ¤ëŠ” ë§Œë“¤ì§€ ì•Šê¸° ë•Œë¬¸ì— private ì„ ì–¸
 	
 	public static void makeWelcomPage(String mailaddr, String filename) {
 		try {
@@ -12,8 +12,8 @@ public class PageMaker {
 			String username = mailprop.getProperty(mailaddr);
 			HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
 			writer.title("Welcom to " + username + "'s page!");
-			writer.paragraph(username + "ÀÇ ÆäÀÌÁö¿¡ ¿À½Å °É È¯¿µÇÕ´Ï´Ù.");
-			writer.paragraph("¸ŞÀÏÀ» ±â´Ù¸®°í ÀÖ½À´Ï´Ù.");
+			writer.paragraph(username + "ì˜ í˜ì´ì§€ì— ì˜¤ì‹  ê±¸ í™˜ì˜í•©ë‹ˆë‹¤.");
+			writer.paragraph("ë©”ì¼ì„ ê¸°ë‹¤ë¦¬ê³  ìˆìŠµë‹ˆë‹¤.");
 			writer.mailto(mailaddr, username);
 			writer.close();
 			System.out.println(filename + " is created for " + mailaddr + " (" + username + ")");
