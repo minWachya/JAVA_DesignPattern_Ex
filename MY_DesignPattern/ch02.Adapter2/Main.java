@@ -1,13 +1,9 @@
-package AdapterPattern1;
+package AdapterPattern2;
 
-// Adapter í´ë˜ìŠ¤
-public class Adapter extends Charger_microUSB implements Charger_TypeC {
-	public Adapter(String device) {
-		super(device);
-	}
-	
-	@Override						     // 5í•€ ì¶©ì „ê¸° --> ì–´ëŒ‘í„° --> Cíƒ€ì… ì¶©ì „ê¸° --> Cíƒ€ì… ì¶©ì „ê¸°ë¥¼ ê°€ì§„ ê¸°ê¸° ì¶©ì „í•˜ê¸°
-	public void charging_TypeC() {	// Cíƒ€ì… ì¶©ì „ê¸°ë¡œ ì¶©ì „í•˜ëŠ” ë©”ì†Œë“œ
-		charging_microUSB();		// ì§„ì§œ ì¶©ì „ì€ 5í•€ ì¶©ì „ê¸°ê°€ í•¨
+// Å¬¶óÀÌ¾ğÆ® = ³ª
+public class Main {
+	public static void main(String[] args) {
+		Charger_TypeC chargerTypeC = new Adapter("ÀÌºÏ¸®´õ±â");		// CÅ¸ÀÔ ÃæÀü±â¿¡ ¾î´ğÅÍ ³¢¿ì±â
+		chargerTypeC.charging_TypeC();	// ÃæÀüÇÏ±â
 	}
 }
