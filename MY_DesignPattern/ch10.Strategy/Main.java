@@ -21,11 +21,11 @@ public class Main {
 			if (str.equals("종료")) break;	// "종료" 입력하면 게임 끝
 			
 			if (str.equals("얍")) {	// "얍" 입력 시 공격
-				player.attack();	// 공격, 경험치 ++
+				player.attack(); // 공격, 경험치 ++
 				
 				if(player.getAttackNum() == 3) {	// 경첨치가 3이면(공격을 3번 하면)
 					System.out.println("~~~Level up!!!~~~");// 레벨업
-					player.levelUp(new Level2());			// 레벨 2가 됨
+					player.levelUp(new Level2());		// 레벨 2가 됨
 				}
 			}
 		}
