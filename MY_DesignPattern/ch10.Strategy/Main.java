@@ -8,29 +8,29 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Player player = new Player("minWachya", new Level1());	// ë ˆë²¨ 1 í”Œë ˆì´ì–´ ìƒì„±
+		Player player = new Player("minWachya", new Level1());	// ·¹º§ 1 ÇÃ·¹ÀÌ¾î »ı¼º
 		String str = "";
 		
-		System.out.println("ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
+		System.out.println("°ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.");
 		
 		while(true) {
-			// ì…ë ¥ë°›ê¸°
+			// ÀÔ·Â¹Ş±â
 			System.out.print(player.getName());
 			str = br.readLine();
 			
-			if (str.equals("ì¢…ë£Œ")) break;	// "ì¢…ë£Œ" ì…ë ¥í•˜ë©´ ê²Œì„ ë
+			if (str.equals("Á¾·á")) break;	// "Á¾·á" ÀÔ·ÂÇÏ¸é °ÔÀÓ ³¡
 			
-			if (str.equals("ì–")) {	// "ì–" ì…ë ¥ ì‹œ ê³µê²©
-				player.attack(); // ê³µê²©, ê²½í—˜ì¹˜ ++
+			if (str.equals("¾å")) {	// "¾å" ÀÔ·Â ½Ã °ø°İ
+				player.attack();	// °ø°İ, °æÇèÄ¡ ++
 				
-				if(player.getAttackNum() == 3) {	// ê²½ì²¨ì¹˜ê°€ 3ì´ë©´(ê³µê²©ì„ 3ë²ˆ í•˜ë©´)
-					System.out.println("~~~Level up!!!~~~");// ë ˆë²¨ì—…
-					player.levelUp(new Level2());		// ë ˆë²¨ 2ê°€ ë¨
+				if(player.getAttackNum() == 3) {	// °æÃ·Ä¡°¡ 3ÀÌ¸é(°ø°İÀ» 3¹ø ÇÏ¸é)
+					System.out.println("~~~Level up!!!~~~");// ·¹º§¾÷
+					player.levelUp(new Level2());			// ·¹º§ 2°¡ µÊ
 				}
 			}
 		}
 		
-		System.out.println("ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println("Á¾·áµÇ¾ú½À´Ï´Ù.");
 	}
 
 }
