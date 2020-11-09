@@ -1,27 +1,27 @@
 package StrategyPattern;
 
-// ÇÃ·¹ÀÌ¾î
+// í”Œë ˆì´ì–´
 public class Player {
-	private String name;		// ÀÌ¸§
-	private Strategy strategy;	// °ø°İ ½ºÅ³(·¹º§¿¡ µû¶ó ´Ş¶óÁü)
-	private int attackNum = 0;	// °æÇèÄ¡(°ø°İ È½¼ö)
+	private String name;		// ì´ë¦„
+	private Strategy strategy;	// ê³µê²© ìŠ¤í‚¬(ë ˆë²¨ì— ë”°ë¼ ë‹¬ë¼ì§)
+	private int attackNum = 0;	// ê²½í—˜ì¹˜(ê³µê²© íšŸìˆ˜)
 	
 	public Player(String name, Strategy strategy) {
 		this.name = name;
 		this.strategy = strategy;
 	}
 	
-	public void attack() {		// °ø°İ ½ºÅ³Àº StrategyÇÑÅ× À§ÀÓ
-		strategy.attact();		// °ø°İ
-		attackNum++;			// °æÇèÄ¡++
+	public void attack() {		// ê³µê²© ìŠ¤í‚¬ì€ Strategyí•œí…Œ ìœ„ì„
+		strategy.attact();	// ê³µê²©
+		attackNum++;		// ê²½í—˜ì¹˜++
 	}
-	public String getName() {	// ÀÌ¸§ ¸®ÅÏ
+	public String getName() {	// ì´ë¦„ ë¦¬í„´
 		return "[" + name  + "]:";
 	}
-	public int getAttackNum() {	// °æÃ·Ä¡ ¸®ÅÏ
+	public int getAttackNum() {	// ê²½ì²¨ì¹˜ ë¦¬í„´
 		return attackNum;
 	}
-	public void levelUp(Strategy strategy) {	// ¾Ë°í¸®Áò ¹Ù²Ù±â(·¹º§¾÷)
+	public void levelUp(Strategy strategy) {	// ì•Œê³ ë¦¬ì¦˜ ë°”ê¾¸ê¸°(ë ˆë²¨ì—…)
 		this.strategy = strategy;
 	}
 }
